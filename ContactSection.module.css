@@ -1,0 +1,198 @@
+/* src/components/ContactSection/ContactSection.module.css */
+
+.contactSection {
+  padding: 4rem 1rem; /* Padding around the entire section */
+  background-color: #f9f9f9; /* Light background for the section */
+  text-align: center; /* Center align text within the section */
+}
+
+.title {
+  font-size: 2.5rem; /* Large font size for the main title */
+  color: #333; /* Dark gray color */
+  margin-bottom: 1rem; /* Space below the title */
+}
+
+.description {
+  font-size: 1.1rem; /* Slightly larger font for description */
+  color: #666; /* Medium gray color */
+  max-width: 800px; /* Limit width for better readability */
+  margin: 0 auto 2.5rem; /* Center and add bottom margin */
+  line-height: 1.6; /* Improved line spacing */
+}
+
+.contactContent {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allows items to wrap onto the next line on smaller screens */
+  justify-content: center; /* Center content horizontally */
+  gap: 2rem; /* Space between flex items */
+  max-width: 1000px; /* Max width for the content container */
+  margin: 0 auto; /* Center the content container */
+  padding: 1.5rem; /* Internal padding */
+  background-color: #fff; /* White background for the content box */
+  border-radius: 8px; /* Slightly rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Styles for Direct Contact Information (Email, Phone, Location) */
+.contactInfo {
+  flex: 1; /* Allows it to take up available space, tries to be equal to socialLinks */
+  min-width: 280px; /* Minimum width before wrapping */
+  text-align: left; /* Align text to the left */
+  padding: 1rem; /* Internal padding */
+}
+
+.infoItem {
+  display: flex; /* Flex for icon and text */
+  align-items: center; /* Vertically align icon and text */
+  margin-bottom: 1rem; /* Space between each contact item */
+  font-size: 1.1rem; /* Font size for contact text */
+  color: #444; /* Darker gray color */
+}
+
+.icon {
+  font-size: 1.5rem; /* Larger font size for icons/emojis */
+  margin-right: 0.8rem; /* Space between icon and text */
+  color: #007bff; /* Example icon color (blue) */
+}
+
+.infoText {
+  color: #444; /* Color for the text */
+  text-decoration: none; /* Remove underline from links */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.infoText:hover {
+  color: #007bff; /* Example hover color (blue) */
+}
+
+/* Styles for Social Media Links (LinkedIn, GitHub) */
+.socialLinks {
+  flex: 1; /* Allows it to take up available space, tries to be equal to contactInfo */
+  min-width: 280px; /* Minimum width before wrapping */
+  display: flex;
+  flex-direction: column; /* Stack social links vertically */
+  gap: 0.8rem; /* Space between social links */
+  padding: 1rem; /* Internal padding */
+}
+
+.socialLink {
+  display: flex; /* Flex for icon and text */
+  align-items: center; /* Vertically align icon and text */
+  gap: 0.6rem; /* Space between icon and text */
+  font-size: 1.1rem; /* Font size for social link text */
+  color: #007bff; /* Example social link color (blue) */
+  text-decoration: none; /* Remove underline from links */
+  padding: 0.6rem 1rem; /* Padding around the link content */
+  border: 1px solid #007bff; /* Border matching the color */
+  border-radius: 5px; /* Rounded corners for the "button" */
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+  width: fit-content; /* Make the link button size to its content */
+  margin: 0 auto; /* Center the link buttons within their container */
+}
+
+.socialLink:hover {
+  background-color: #007bff; /* Background color on hover */
+  color: #fff; /* Text color on hover */
+}
+
+.socialIcon {
+  font-size: 1.3rem; /* Font size for social icons/emojis */
+  color: #007bff; /* Icon color for non-hover state */
+}
+
+.socialLink:hover .socialIcon {
+  color: #fff; /* Icon color on hover (white) */
+}
+
+/* Styles for Contact Form */
+.contactForm {
+  flex: 2; /* Allows it to take more space, e.g., double of info/social */
+  min-width: 300px; /* Minimum width before wrapping */
+  text-align: left; /* Align form labels/inputs to the left */
+  padding: 1rem; /* Internal padding */
+}
+
+.contactForm h3 {
+  font-size: 1.8rem; /* Font size for the form heading */
+  color: #333; /* Dark gray color */
+  margin-bottom: 1.5rem; /* Space below heading */
+  text-align: center; /* Center form heading */
+}
+
+.formGroup {
+  margin-bottom: 1rem; /* Space between form input groups */
+}
+
+.formGroup label {
+  display: block; /* Make label a block element for proper spacing */
+  margin-bottom: 0.5rem; /* Space between label and input */
+  font-weight: bold; /* Bold labels */
+  color: #555; /* Medium dark gray color */
+}
+
+.formGroup input[type="text"],
+.formGroup input[type="email"],
+.formGroup textarea {
+  width: 100%; /* Full width inputs */
+  padding: 0.8rem; /* Internal padding */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1rem; /* Standard font size */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.formGroup textarea {
+  resize: vertical; /* Allow only vertical resizing of textarea */
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none; /* Remove default outline */
+  border-color: #007bff; /* Blue border on focus */
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Blue shadow on focus */
+}
+
+.submitButton {
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+  padding: 0.8rem 1.5rem; /* Padding */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1.1rem; /* Larger font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+  display: block; /* Make button take full width */
+  width: 100%; /* Full width */
+  margin-top: 1.5rem; /* Space above the button */
+}
+
+.submitButton:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .contactContent {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items horizontally when stacked */
+  }
+
+  .contactInfo,
+  .socialLinks,
+  .contactForm {
+    width: 90%; /* Take more width on smaller screens */
+    min-width: unset; /* Remove min-width constraints, let width control it */
+    margin-bottom: 1.5rem; /* Add space between stacked sections */
+  }
+
+  .socialLinks {
+    flex-direction: row; /* Display social links horizontally within their section on smaller screens */
+    flex-wrap: wrap; /* Allow them to wrap */
+    justify-content: center; /* Center them horizontally */
+  }
+
+  .socialLink {
+    width: unset; /* Let content define width of individual social links */
+    margin: 0.5rem; /* Adjust spacing between them */
+  }
+}
