@@ -1,0 +1,21 @@
+/* src/components/ProjectsSection/ProjectsSection.module.css */
+
+.projectsSection {
+  background-color: #f7fafc; /* Light grey background */
+}
+
+/* Inherits .container and .sectionTitle from global index.css */
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .projectsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
